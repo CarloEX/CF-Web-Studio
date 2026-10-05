@@ -31,6 +31,7 @@
             position: sticky;
 top: 0;
 z-index: 1000;
+
         }
 
         header h2 {
@@ -80,13 +81,11 @@ nav a:hover::after {
     padding: 40px 20px;
 
     background:
-        linear-gradient(rgba(5, 10, 20, 0.88), rgba(5, 10, 20, 0.88)),
-        url("./bar.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    color: white;
+    linear-gradient(rgba(5, 10, 20, 0.70), rgba(5, 10, 20, 0.70)),
+    url("./cf-web-studio-banner.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-color: #050a14;
 }
 .hero-sopratitolo {
     color: #02fcda;
@@ -136,7 +135,7 @@ nav a:hover::after {
 .button-secondario {
     border: 2px solid #02fcda;
     color: white;
-    padding: 14px 28px;
+    padding: 16px 28px;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
@@ -151,11 +150,13 @@ nav a:hover::after {
         .hero h1 {
     font-size: 80px;
     margin: 0;
+    color: #e8e8e8;
     text-shadow: 0 4px 15px rgba(0, 238, 255, 0.6);
 }
         .hero p {
     font-size: 20px;
     margin-top: 15px;
+    color: #bebcbc;
     text-shadow: 0 2px 8px rgba(0, 195, 255, 0.6);
 }
         .button {
@@ -486,7 +487,7 @@ section.visibile {
 
 .progetto-immagine img {
     width: 100%;
-    height: 250x;
+    height: 250px;
     object-fit: cover;
     display: block;
 }
@@ -502,15 +503,35 @@ section.visibile {
     display: inline-block;
     margin-top: 20px;
 }
-.chi-sono-testo {
-    flex: 1;
+.chi-sono {
+    background-color: #f5f5f5;
+    color: #111;
     text-align: center;
 }
 
-.chi-sono-testo .button {
-    display: inline-block;
-    margin-top: 25px;
+.chi-sono-testo {
+    max-width: 750px;
+    margin: auto;
 }
+
+.chi-sono h2 {
+    font-size: 45px;
+    margin: 0 0 25px;
+    color: #757575;
+}
+
+.chi-sono-testo p:not(.sopratitolo) {
+    color: #979797;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.chi-sono .button {
+    display: inline-block;
+    margin-top: 20px;
+}
+
 .come-funziona {
     background-color: #111;
     color: white;
@@ -821,6 +842,206 @@ html {
     border-radius: 8px;
     font-size: 18px;
 }
+.hero h1,
+.hero p,
+.hero .buttons {
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.lavori {
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.lavori .progetto {
+    max-width: 1000px;
+    margin: 50px auto 0;
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.lavori .progetto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.progetto-immagine {
+    flex: 1;
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.progetto-immagine img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+.progetto-immagine img:hover {
+    transform: scale(1.05);
+}
+
+.progetto-info {
+    flex: 1;
+}
+
+.progetto-tipo {
+    color: #02fcda;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.progetto-info h3 {
+    font-size: 32px;
+    margin: 15px 0;
+    color: #111;
+}
+
+.progetto-info p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.progetto-tecnologie {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.progetto-tecnologie span {
+    background-color: #111;
+    color: #02fcda;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+
+    .lavori .progetto {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .progetto-immagine {
+        max-width: 100%;
+    }
+
+    .progetto-info {
+        width: 100%;
+    }
+
+    .progetto-tecnologie {
+        justify-content: center;
+    }
+
+}
+.chi-sono {
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+.chi-sono-testo {
+    max-width: 750px;
+    margin: auto;
+}
+
+.chi-sono h2 {
+    font-size: 45px;
+    margin: 0 0 25px;
+    color: #111;
+}
+
+.chi-sono-testo p:not(.sopratitolo) {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.chi-sono .button {
+    display: inline-block;
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+
+    .chi-sono h2 {
+        font-size: 35px;
+    }
+
+    .chi-sono-testo p:not(.sopratitolo) {
+        font-size: 16px;
+    }
+
+}
+.chi-sono {
+    background-color: #111 !important;
+    color: white !important;
+    text-align: center;
+}
+
+.chi-sono h2 {
+    color: white !important;
+}
+
+.chi-sono-testo p {
+    color: #aaa !important;
+}
+.contatti-bottoni .button-secondario {
+    border: 2px solid #a855f7;
+    color: white;
+    background-color: #000;
+}
+
+.contatti-bottoni .button-secondario:hover {
+    background-color: #a855f7;
+    color: white;
+}
+.contatti-bottoni .button-secondario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 16px 28px;
+}
+.contatti-bottoni .button {
+    border: 2px solid #25D366;
+    background-color: #000;
+    color: white;
+}
+
+.contatti-bottoni .button:hover {
+    background-color: #25D366;
+    color: white;
+}
+.contatti-bottoni .button-secondario {
+    padding: 1px 60px;
+}
 
     </style>
 </head>
@@ -849,11 +1070,11 @@ html {
 
     <p class="hero-sopratitolo">WEB DESIGN • SITI WEB • PRESENZA ONLINE</p>
 
-    <h1>Creo siti web<br>che fanno crescere la tua attività.</h1>
+    <h1>Creo siti web<br>che per la tua attività.</h1>
 
     <p class="hero-descrizione">
-        Realizzo siti moderni, veloci e personalizzati
-        per attività, professionisti e piccole imprese.
+     Realizzo siti web moderni, veloci e personalizzati, pensati per valorizzare la tua attività e farti trovare online.
+
     </p>
 
     <div class="hero-bottoni">
@@ -885,7 +1106,7 @@ html {
             <div class="icona">💻</div>
             <h3>Siti Web</h3>
             <p>
-                Siti moderni,semplici, personalizzati e facili da utilizzare,
+                Siti moderni, semplici, personalizzati e facili da utilizzare,
                 pensati per raccontare la tua attività.
             </p>
         </div>
@@ -894,8 +1115,8 @@ html {
             <div class="icona">📱</div>
             <h3>Adatto a tutti i dispositivi</h3>
             <p>
-                Il tuo sito sarà perfetto su computer,
-                smartphone e tablet.
+               Il tuo sito sarà ottimizzato per computer,
+    smartphone e tablet, offrendo una buona esperienza su ogni dispositivo.
             </p>
         </div>
 
@@ -912,8 +1133,8 @@ html {
             <div class="icona">⚡</div>
             <h3>Velocità</h3>
             <p>
-                Siti leggeri e veloci, per offrire
-                una navigazione piacevole ai tuoi clienti.
+                Siti leggeri e veloci, progettati per offrire
+    una navigazione semplice e piacevole ai tuoi clienti.
             </p>
         </div>
 
@@ -941,12 +1162,12 @@ html {
 
             <span class="progetto-tipo">SITO WEB • ATTIVITÀ LOCALE</span>
 
-            <h3>Progetto Demo</h3>
+            <h3>Demo sito web </h3>
 
             <p>
-                Un progetto dimostrativo creato per mostrare
-              come posso trasformare un'idea in un sito web
-                    moderno, elegante e funzionale.
+                Un esempio di sito web realizzato per mostrare
+come posso trasformare un'idea in una presenza online
+moderna, elegante e funzionale.
             </p>
 
             <div class="progetto-tecnologie">
@@ -960,36 +1181,31 @@ html {
         </div>
 
     </div>
+<section class="chi-sono" id="chi-sono">
 
-</section>
-<section class="chi-sono" id="chi-sono"></section>
-<div class="chi-sono-testo">
+    <div class="chi-sono-testo">
 
-    <p class="sopratitolo">CHI SONO</p>
+        <p class="sopratitolo">CHI SONO</p>
 
-    <h2>Creo siti con passione e voglia di crescere.</h2>
+        <h2>Creo siti con passione, cura e voglia di crescere.</h2>
 
-    <p>
-        Sono un giovane web creator e mi occupo della realizzazione
-        di siti web moderni e personalizzati.
-    </p>
+        <p>
+            Sono un giovane web creator e mi occupo della realizzazione
+            di siti web moderni e personalizzati.
+        </p>
 
-    <p>
-        Mi piace trasformare le idee in siti semplici, belli da vedere
-        e soprattutto utili per chi vuole far conoscere la propria
-        attività online.
-    </p>
+        <p>
+            Mi piace trasformare le idee in siti semplici, belli da vedere
+            e soprattutto utili per chi vuole far conoscere la propria
+            attività online.
+        </p>
 
-    <p>
-        Sono ancora all'inizio del mio percorso, ma ogni progetto
-        è un'occasione per imparare qualcosa di nuovo e migliorare.
-    </p>
+        <p>
+            Sono ancora all'inizio del mio percorso, ma ogni progetto
+            è un'occasione per imparare qualcosa di nuovo e migliorare,
+            spero di soddisfare tutte le richieste, anche se sono un novizio!
+        </p>
 
-    <a href="#contatti" class="button">
-        Parliamo del tuo progetto
-    </a>
-
-</div>
     </div>
 
 </section>
@@ -1057,7 +1273,10 @@ html {
 
     <p class="sopratitolo">PARLIAMONE</p>
 
-    <h2>Hai un progetto in mente?</h2>
+    <h2>Hai un progetto in mente?
+        Raccontami la tua idea e vediamo insieme come trasformarla
+    in un sito web
+    </h2>
 
     <p class="contatti-descrizione">
         Raccontami la tua idea e vediamo insieme come
@@ -1070,10 +1289,10 @@ html {
             Scrivimi su WhatsApp
         </a>
 
-        <a href="#" class="button-secondario">
-            Instagram
-        </a>
-
+        <a href="https://www.instagram.com/cfwebstudio_/" class="button-secondario" target="_blank">
+    Instagram
+</a>
+        
     </div>
 
     <p class="contatti-finale">
@@ -1088,6 +1307,8 @@ html {
 
 
 
+
+    <footer>
 
     <footer>
 
@@ -1108,12 +1329,9 @@ html {
             <h3>Orari</h3>
             <p>Lun - Sab: 07:00 - 23:00</p>
             <p>Domenica: 08:00 - 13:00</p>
-            
         </div>
 
     </div>
-
-    
 
 </footer>
 <script>
@@ -1133,55 +1351,7 @@ html {
 
     controllaSezioni();
 </script>
-<footer>
 
-    <div class="footer-contenuto">
-
-        <div class="footer-brand">
-
-            <h3>Web Creator</h3>
-
-            <p>
-                Creo siti web moderni e personalizzati
-                per attività, professionisti e piccole imprese.
-            </p>
-
-        </div>
-
-        <div class="footer-link">
-
-            <h4>Link rapidi</h4>
-
-            <a href="#servizi">Servizi</a>
-            <a href="#lavori">I miei lavori</a>
-            <a href="#chi-sono">Chi sono</a>
-            <a href="#contatti">Contatti</a>
-
-        </div>
-
-        <div class="footer-contatti">
-
-            <h4>Contatti</h4>
-
-            <a href="https://wa.me/3476686954" target="_blank">
-                WhatsApp
-            </a>
-
-            <a href="#">
-                Instagram
-            </a>
-
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-        <p>© 2026 CF Web Studio. Tutti i diritti riservati.</p>
-
-    </div>
-
-</footer>
 </body>
 
 </html>
