@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CF Web Studio | Siti Web Professionali</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #222;
+        }
+        :root {
+    --colore-principale: #02fcda;
+    --scuro: #111111;
+    --chiaro: #f5f5f5;
+}
+
+        header {
+            background-color: #111;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+top: 0;
+z-index: 1000;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        nav a {
+            color: var(--colore-principale);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3;
+            display: inline-block;
+            
+            }
+
+
+            nav a:hover {
+    color: var(--colore-principale);
+    transform: scale(1.05);
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--colore-principale);
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+        
+
+ .hero {
+    min-height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(rgba(5, 10, 20, 0.88), rgba(5, 10, 20, 0.88)),
+        url("./bar.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+.hero-sopratitolo {
+    color: #02fcda;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin: 0;
+    max-width: 900px;
+}
+
+.hero-descrizione {
+    font-size: 20px;
+    color: #cccccc;
+    max-width: 650px;
+    line-height: 1.6;
+    margin-top: 25px;
+}
+
+.hero-bottoni {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.button {
+    background-color: #02fcda;
+    color: #111;
+    padding: 16px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(2, 252, 218, 0.3);
+}
+
+.button-secondario {
+    border: 2px solid #02fcda;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button-secondario:hover {
+    background-color: #02fcda;
+    color: #111;
+    transform: translateY(-4px);
+}
+        .hero h1 {
+    font-size: 80px;
+    margin: 0;
+    text-shadow: 0 4px 15px rgba(0, 238, 255, 0.6);
+}
+        .hero p {
+    font-size: 20px;
+    margin-top: 15px;
+    text-shadow: 0 2px 8px rgba(0, 195, 255, 0.6);
+}
+        .button {
+            background-color: #000000;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+.button:hover {
+    background-color: #25D366;
+    transform: scale(1.15);
+}
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        section h2 {
+            font-size: 35px;
+            color: var(--scuro);
+            position: relative;
+            display: inline-block;
+        }
+        section h2::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 3px;
+    background-color: var(--colore-principale);
+    margin-top: 8px;
+    border-radius: 10px;
+}
+.prodotti {
+    background-color: rgba(0, 0, 0, 0.856);
+    text-align: center;
+}
+
+.prodotti h2 {
+    color: rgb(255, 255, 255);
+}
+
+.prodotti h2 {
+    color: white;
+
+}
+
+.cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.vantaggi {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.vantaggio {
+    background-color: rgb(24, 20, 20);
+    padding: 25px;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgb(252, 251, 251);
+    text-align: center;
+    transition: 0.3s;
+}
+.vantaggio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 204, 255, 0.4);
+}
+.vantaggio h3 {
+    color: rgb(250, 250, 250);
+}
+.vantaggio h3 {
+    font-size: 22px;
+}
+.card {
+    background-color: #faf9f9;
+    padding: 30px;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgb(255, 255, 255);
+    transition: opacity 0.8, transform 0.8s;
+}
+.prodotti .card {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.prodotti.visibile .card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.prodotti.visibile .card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.prodotti.visibile .card:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.prodotti.visibile .card:nth-child(3) {
+    transition-delay: 0.5s;
+}
+.card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.card:nth-child(3) {
+    transition-delay: 0.5s;
+}
+.vantaggio p {
+    color: white;
+}
+.card h3 {
+    font-size: 24px;
+}
+
+.card strong {
+    font-size: 20px;
+}
+        footer {
+            background-color: #000000;
+            color: rgb(240, 6, 6);
+            text-align: center;
+            padding: 25px;
+        }
+
+    /* tutto il CSS che abbiamo già scritto */
+
+    .card strong {
+        font-size: 20px;
+    }
+
+    footer {
+        background-color: #111;
+        color: white;
+        text-align: center;
+        padding: 25px;
+    }
+footer {
+    background-color: #111;
+    color: white;
+    padding: 50px 20px 20px;
+}
+
+.footer-contenuto {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-colonna {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-colonna h3 {
+    color: var(--colore-principale);
+    margin-bottom: 15px;
+}
+
+.footer-colonna p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.footer-fondo {
+    border-top: 1px solid #333;
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+    color: #888;
+}
+
+    @media (max-width: 600px) {
+
+        header {
+            padding: 20px;
+            flex-direction: column;
+            gap: 15px;
+        }
+      .footer-contenuto {
+    flex-direction: column;
+    text-align: center;
+}
+        nav a {
+            margin: 0 8px;
+        }
+
+        .hero {
+            height: 400px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .cards {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            width: 80%;
+        }
+
+    }
+.galleria img {
+    width: 250px;
+    height: 189px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.foto-galleria {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.foto-galleria img {
+    transition: transform 0.3s;
+}
+
+.foto-galleria img:hover {
+    transform: scale(1.25);
+}
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.8s;
+}
+
+section.visibile {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.servizi {
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.sopratitolo {
+    color: #02fcda;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.servizi h2 {
+    font-size: 45px;
+    margin: 0;
+    color: #111;
+}
+
+.descrizione-sezione {
+    max-width: 650px;
+    margin: 20px auto 50px;
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.servizi-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.servizio {
+    background-color: white;
+    width: 220px;
+    padding: 35px 25px;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.servizio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.icona {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.servizio h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.servizio p {
+    color: #666;
+    line-height: 1.6;
+}
+.progetto-immagine {
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.progetto-immagine img {
+    width: 100%;
+    height: 250x;
+    object-fit: cover;
+    display: block;
+}
+.progetto-info {
+    flex: 1;
+    text-align: center;
+}
+.progetto-tecnologie {
+    justify-content: center;
+}
+
+.progetto-info .button {
+    display: inline-block;
+    margin-top: 20px;
+}
+.chi-sono-testo {
+    flex: 1;
+    text-align: center;
+}
+
+.chi-sono-testo .button {
+    display: inline-block;
+    margin-top: 25px;
+}
+.come-funziona {
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+.come-funziona h2 {
+    font-size: 45px;
+    margin: 0;
+}
+
+.come-funziona .descrizione-sezione {
+    color: #aaa;
+}
+
+.passaggi {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.passaggio {
+    flex: 1;
+    min-width: 200px;
+    max-width: 240px;
+    padding: 30px 20px;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    border: 1px solid #292929;
+    transition: 0.3s;
+}
+
+.passaggio:hover {
+    transform: translateY(-10px);
+    border-color: #02fcda;
+    box-shadow: 0 15px 35px rgba(2, 252, 218, 0.12);
+}
+
+.numero-passaggio {
+    color: #02fcda;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.passaggio h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.passaggio p {
+    color: #aaa;
+    line-height: 1.6;
+}
+@media (max-width: 768px) {
+
+    .passaggi {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .passaggio {
+        width: 80%;
+        max-width: 400px;
+    }
+
+}
+.contatti {
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.contatti h2 {
+    font-size: 50px;
+    color: #111;
+    margin: 0;
+}
+
+.contatti-descrizione {
+    max-width: 650px;
+    margin: 20px auto 35px;
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contatti-bottoni {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contatti-bottoni .button {
+    display: inline-block;
+}
+
+.contatti-bottoni .button-secondario {
+    display: inline-block;
+    border-color: #111;
+    color: #111;
+}
+
+.contatti-bottoni .button-secondario:hover {
+    background-color: #111;
+    color: white;
+}
+
+.contatti-finale {
+    margin-top: 30px;
+    color: #888;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+
+    .contatti h2 {
+        font-size: 35px;
+    }
+
+    .contatti-descrizione {
+        font-size: 16px;
+    }
+
+    .contatti-bottoni {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+footer {
+    background-color: #0a0a0a;
+    color: white;
+    padding: 60px 30px 20px;
+}
+
+.footer-contenuto {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.footer-brand {
+    max-width: 400px;
+}
+
+.footer-brand h3 {
+    color: #02fcda;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: #999;
+    line-height: 1.6;
+}
+
+.footer-link,
+.footer-contatti {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-link h4,
+.footer-contatti h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.footer-link a,
+.footer-contatti a {
+    color: #999;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-link a:hover,
+.footer-contatti a:hover {
+    color: #02fcda;
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #292929;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #666;
+    font-size: 13px;
+}
+@media (max-width: 768px) {
+
+    .footer-contenuto {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-brand {
+        max-width: 500px;
+    }
+
+    .footer-link a:hover,
+    .footer-contatti a:hover {
+        transform: none;
+    }
+
+}
+@media (max-width: 768px) {
+
+    /* MENU */
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    .logo {
+    font-size: 20px;
+}
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    /* HERO */
+    .hero {
+        min-height: 550px;
+        padding: 40px 20px;
+    }
+
+    .hero-sopratitolo {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-descrizione {
+        font-size: 17px;
+    }
+
+
+    /* TITOLI SEZIONI */
+    .servizi h2,
+    .lavori h2,
+    .come-funziona h2 {
+        font-size: 35px;
+    }
+
+
+    /* CHI SONO */
+    .chi-sono-contenuto {
+        gap: 40px;
+    }
+
+
+    /* PROGETTO */
+    .progetto {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .progetto-immagine img {
+        height: 220px;
+    }
+
+
+    /* CONTATTI */
+    .contatti h2 {
+        font-size: 35px;
+    }
+
+}
+html {
+    scroll-behavior: smooth;
+}
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo span {
+    color: #02fcda;
+    border: 2px solid #02fcda;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+    </style>
+</head>
+
+<body>
+
+   <header>
+
+    <div class="logo">
+    <span>CF</span>
+    Web Studio
+</div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#lavori">I miei lavori</a>
+        <a href="#chi-sono">Chi sono</a>
+        <a href="#contatti">Contatti</a>
+    </nav>
+
+</header>
+
+
+    <div class="hero">
+
+    <p class="hero-sopratitolo">WEB DESIGN • SITI WEB • PRESENZA ONLINE</p>
+
+    <h1>Creo siti web<br>che fanno crescere la tua attività.</h1>
+
+    <p class="hero-descrizione">
+        Realizzo siti moderni, veloci e personalizzati
+        per attività, professionisti e piccole imprese.
+    </p>
+
+    <div class="hero-bottoni">
+        <a class="button" href="#contatti">Richiedi un preventivo</a>
+
+        <a class="button-secondario" href="#lavori">Dai un occhiata ai miei lavori</a>
+    </div>
+
+</div>
+        
+
+    </div>
+
+
+   <section class="servizi" id="servizi">
+
+    <p class="sopratitolo">COSA POSSO FARE PER TE</p>
+
+    <h2>I miei servizi</h2>
+
+    <p class="descrizione-sezione">
+        Creo soluzioni web pensate per valorizzare la tua attività
+        e aiutarti a presentarti online in modo professionale.
+    </p>
+
+    <div class="servizi-container">
+
+        <div class="servizio">
+            <div class="icona">💻</div>
+            <h3>Siti Web</h3>
+            <p>
+                Siti moderni,semplici, personalizzati e facili da utilizzare,
+                pensati per raccontare la tua attività.
+            </p>
+        </div>
+
+        <div class="servizio">
+            <div class="icona">📱</div>
+            <h3>Adatto a tutti i dispositivi</h3>
+            <p>
+                Il tuo sito sarà perfetto su computer,
+                smartphone e tablet.
+            </p>
+        </div>
+
+        <div class="servizio">
+            <div class="icona">🎨</div>
+            <h3>Design moderno</h3>
+            <p>
+                Un design curato e professionale,
+                studiato per distinguerti dalla concorrenza.
+            </p>
+        </div>
+
+        <div class="servizio">
+            <div class="icona">⚡</div>
+            <h3>Velocità</h3>
+            <p>
+                Siti leggeri e veloci, per offrire
+                una navigazione piacevole ai tuoi clienti.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<section class="lavori" id="lavori">
+
+    <p class="sopratitolo">PORTFOLIO</p>
+
+    <h2>I miei lavori</h2>
+
+    <p class="descrizione-sezione">
+        Alcuni dei progetti che ho realizzato per sperimentare
+        idee, design e soluzioni web.
+    </p>
+
+    <div class="progetto">
+
+        <div class="progetto-immagine">
+            <img src="./bar.jpg" alt="Anteprima progetto web">
+        </div>
+
+        <div class="progetto-info">
+
+            <span class="progetto-tipo">SITO WEB • ATTIVITÀ LOCALE</span>
+
+            <h3>Progetto Demo</h3>
+
+            <p>
+                Un progetto dimostrativo creato per mostrare
+              come posso trasformare un'idea in un sito web
+                    moderno, elegante e funzionale.
+            </p>
+
+            <div class="progetto-tecnologie">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+
+            <a href="#" class="button">Visualizza progetto</a>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="chi-sono" id="chi-sono"></section>
+<div class="chi-sono-testo">
+
+    <p class="sopratitolo">CHI SONO</p>
+
+    <h2>Creo siti con passione e voglia di crescere.</h2>
+
+    <p>
+        Sono un giovane web creator e mi occupo della realizzazione
+        di siti web moderni e personalizzati.
+    </p>
+
+    <p>
+        Mi piace trasformare le idee in siti semplici, belli da vedere
+        e soprattutto utili per chi vuole far conoscere la propria
+        attività online.
+    </p>
+
+    <p>
+        Sono ancora all'inizio del mio percorso, ma ogni progetto
+        è un'occasione per imparare qualcosa di nuovo e migliorare.
+    </p>
+
+    <a href="#contatti" class="button">
+        Parliamo del tuo progetto
+    </a>
+
+</div>
+    </div>
+
+</section>
+<section class="come-funziona" id="come-funziona">
+
+    <p class="sopratitolo">COME FUNZIONA</p>
+
+    <h2>Dal primo contatto al sito online.</h2>
+
+    <p class="descrizione-sezione">
+        Un processo semplice e trasparente per trasformare
+        la tua idea in una presenza online professionale.
+    </p>
+
+    <div class="passaggi">
+
+        <div class="passaggio">
+            <div class="numero-passaggio">01</div>
+
+            <h3>Mi racconti la tua attività</h3>
+
+            <p>
+                Mi spieghi cosa fai, cosa vuoi comunicare
+                e quali sono i tuoi obiettivi.
+            </p>
+        </div>
+
+        <div class="passaggio">
+            <div class="numero-passaggio">02</div>
+
+            <h3>Progettiamo il sito</h3>
+
+            <p>
+                Studiamo insieme struttura, stile e contenuti
+                per creare un sito adatto alla tua attività.
+            </p>
+        </div>
+
+        <div class="passaggio">
+            <div class="numero-passaggio">03</div>
+
+            <h3>Realizzo il sito</h3>
+
+            <p>
+                Trasformo il progetto in un sito moderno,
+                responsive e curato nei dettagli.
+            </p>
+        </div>
+
+        <div class="passaggio">
+            <div class="numero-passaggio">04</div>
+
+            <h3>Online e pronto</h3>
+
+            <p>
+                Ti consegno il sito pronto per essere mostrato
+                ai tuoi clienti e utilizzato online.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<section class="contatti" id="contatti">
+
+    <p class="sopratitolo">PARLIAMONE</p>
+
+    <h2>Hai un progetto in mente?</h2>
+
+    <p class="contatti-descrizione">
+        Raccontami la tua idea e vediamo insieme come
+        trasformarla in un sito web professionale.
+    </p>
+
+    <div class="contatti-bottoni">
+
+        <a href="https://wa.me/3476686954" class="button" target="_blank">
+            Scrivimi su WhatsApp
+        </a>
+
+        <a href="#" class="button-secondario">
+            Instagram
+        </a>
+
+    </div>
+
+    <p class="contatti-finale">
+        Nessun impegno. Parliamo semplicemente della tua idea.
+    </p>
+
+</section>
+
+
+<section class="galleria">
+
+
+    <h2>La nostra galleria!</h2>
+    <div class="foto-galleria">
+
+        <img src="Galleria immagini/Galleria.jpg">
+        <img src="Galleria immagini/carlo foto.jpg">
+        <img src="Galleria immagini/san già.jpg">
+
+        </div>
+
+
+
+</section>
+    <section id="contatti">
+
+        <h2>Contatti</h2>
+
+        <p>📍 Via Roma 10, Siderno</p>
+
+        <p>📞 333 1234567</p>
+
+        <p>✉️ info@bardelsole.it</p>
+
+    </section>
+
+
+    <footer>
+
+    <div class="footer-contenuto">
+
+        <div class="footer-colonna">
+            <h3>CF Web Studio</h3>
+            <p>Creo il tuo sito vetrina, semplice ma funzionale.</p>
+        </div>
+
+        <div class="footer-colonna">
+            <h3>Contattami qui</h3>
+            <p>📞 3476686954</p>
+            <p>✉️ fimognari.carlo08@gmail.com</p>
+        </div>
+
+        <div class="footer-colonna">
+            <h3>Orari</h3>
+            <p>Lun - Sab: 07:00 - 23:00</p>
+            <p>Domenica: 08:00 - 13:00</p>
+            
+        </div>
+
+    </div>
+
+    <div class="footer-fondo">
+        © 2026 Bar del Sole · Tutti i diritti riservati
+    </div>
+
+</footer>
+<script>
+    const sezioni = document.querySelectorAll("section");
+
+    function controllaSezioni() {
+        sezioni.forEach(function(sezione) {
+            const posizione = sezione.getBoundingClientRect().top;
+
+            if (posizione < window.innerHeight - 100) {
+                sezione.classList.add("visibile");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", controllaSezioni);
+
+    controllaSezioni();
+</script>
+<footer>
+
+    <div class="footer-contenuto">
+
+        <div class="footer-brand">
+
+            <h3>Web Creator</h3>
+
+            <p>
+                Creo siti web moderni e personalizzati
+                per attività, professionisti e piccole imprese.
+            </p>
+
+        </div>
+
+        <div class="footer-link">
+
+            <h4>Link rapidi</h4>
+
+            <a href="#servizi">Servizi</a>
+            <a href="#lavori">I miei lavori</a>
+            <a href="#chi-sono">Chi sono</a>
+            <a href="#contatti">Contatti</a>
+
+        </div>
+
+        <div class="footer-contatti">
+
+            <h4>Contatti</h4>
+
+            <a href="https://wa.me/3476686954" target="_blank">
+                WhatsApp
+            </a>
+
+            <a href="#">
+                Instagram
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>© 2026 CF Web Studio. Tutti i diritti riservati.</p>
+
+    </div>
+
+</footer>
+</body>
+
+</html>
