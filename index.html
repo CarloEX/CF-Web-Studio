@@ -1057,7 +1057,37 @@ html {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(255, 0, 80, 0.3);
 }
+.progetto-immagine {
+    position: relative;
+    overflow: hidden;
+}
 
+.progetto-immagine img {
+    transition: 0.4s ease;
+}
+
+.progetto-immagine:hover img {
+    transform: scale(1.04);
+}
+
+.progetto-online {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+
+    background-color: #22a447;
+    color: white;
+
+    padding: 7px 12px;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    box-shadow: 0 5px 15px rgba(34, 164, 71, 0.3);
+}
     </style>
 </head>
 
@@ -1170,19 +1200,24 @@ html {
     <div class="progetto">
 
         <div class="progetto-immagine">
-            <img src="./bar.jpg" alt="Anteprima progetto web">
-        </div>
+
+    <span class="progetto-online">● ONLINE</span>
+
+    <img src="./parti-in-bus.jpg" alt="Parti in Bus Calabria">
+
+</div>
 
         <div class="progetto-info">
 
-            <span class="progetto-tipo">SITO WEB • ATTIVITÀ LOCALE</span>
+            <span class="progetto-tipo">SITO WEB • PROGETTO REALE</span>
 
-            <h3>Demo sito web </h3>
+            <h3>Parti in Bus Calabria</h3>
 
             <p>
-                Un esempio di sito web realizzato per mostrare
-come posso trasformare un'idea in una presenza online
-moderna, elegante e funzionale.
+                Sito web realizzato per un'attività di organizzazione
+                di viaggi in bus dalla Calabria, con presentazione
+                dei viaggi, modulo di richiesta informazioni
+                e collegamenti ai social.
             </p>
 
             <div class="progetto-tecnologie">
@@ -1191,11 +1226,19 @@ moderna, elegante e funzionale.
                 <span>JavaScript</span>
             </div>
 
-            <a href="#" class="button">Visualizza progetto</a>
+            <a href="https://carloex.github.io/Parti-in-bus-calabria/"
+               target="_blank"
+               class="button">
+                Visita il sito ↗
+            </a>
 
         </div>
 
     </div>
+
+</section>
+
+   
 <section class="chi-sono" id="chi-sono">
 
     <div class="chi-sono-testo">
